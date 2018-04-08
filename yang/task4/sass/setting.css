@@ -1,0 +1,192 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: "Adobe Fan Heiti Std B", sans-serif; }
+
+body {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto; }
+  body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 44px;
+    font-size: 18px;
+    background-color: #29bde0; }
+    body header .header__return {
+      font-size: 0; }
+    body header .header__help {
+      font-size: 0; }
+    body header .setting-icon-help {
+      width: 24px;
+      height: 24px; }
+    body header .setting-icon-return {
+      width: 12px;
+      height: 20px; }
+    body header .header__title {
+      color: #fff; }
+  body main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 9px;
+    background-color: #f0f0f0; }
+    body main .distribution {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 9px;
+      font-size: 0;
+      background-color: #fff; }
+    body main .distribution__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      height: 276px;
+      width: 15%;
+      border-right: 1px solid #d9d9d9;
+      vertical-align: top; }
+    body main .distribution__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 276px;
+      width: 85%;
+      vertical-align: top; }
+    body main .distribution__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 0;
+      height: 234px;
+      list-style: none; }
+    body main .distribution__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      font-size: 16px;
+      color: #000000; }
+    body main .distribution__item::before {
+      display: inline-block;
+      content: "";
+      margin: 2px 4% 0 0;
+      width: 7px;
+      height: 7px;
+      background-color: #fbb435; }
+    body main .distribution__item--special::before {
+      display: inline-block;
+      content: "";
+      margin: 2px 4% 0 0;
+      width: 7px;
+      height: 7px;
+      background-color: #29bde0; }
+    body main .distribution__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 41px;
+      border-top: 1px solid #d9d9d9; }
+    body main .distribution--btn {
+      width: 100px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #29bde0;
+      background-color: #ffffff;
+      background: url(../images/setting-icon-pen.png) no-repeat right;
+      background-size: 12px 12px;
+      cursor: pointer; }
+    body main .customize {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px 18px;
+      background-color: #fff; }
+      body main .customize .customize__item {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin: 8px 0 0 0;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0; }
+        body main .customize .customize__item::-webkit-input-placeholder {
+          color: #d7d7d7; }
+    body main .personNumber {
+      display: flex;
+      flex-direction: column;
+      margin: 14px 0 16px 0;
+      padding: 0 20px;
+      background-color: #fff; }
+      body main .personNumber .personNumber__des {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0;
+        font-size: 16px;
+        color: #000000; }
+      body main .personNumber .personNumber__input {
+        display: block;
+        margin: 0 10px;
+        width: 30px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        color: #fbb435;
+        text-align: center;
+        background-color: #f4f5f5; }
+    body main .licensing--btn {
+      height: 60px;
+      line-height: 44px;
+      text-align: center;
+      font-size: 20px;
+      color: #fff;
+      background-color: #fbb435;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+    body main .personNumber__control {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px; }
+    body main .personNumber__reduce {
+      width: 14px;
+      height: 14px;
+      outline: none;
+      background: url(../images/settting-icon-add.png);
+      background-size: 100%;
+      cursor: pointer;
+      border: 1px solid #d9d9d9; }
+    body main .personNumber__add {
+      width: 14px;
+      height: 14px;
+      outline: none;
+      background: url(../images/setting-icon-reduce.png);
+      background-size: 100%;
+      cursor: pointer;
+      border: 1px solid #d9d9d9; }
+    body main .personNumber__select {
+      width: 84%;
+      margin: 15px 0;
+      -webkit-appearance: none;
+      background: #ffe6be -webkit-linear-gradient(#fcc671, #fcc671) no-repeat;
+      background-size: 0 100%; }
+      body main .personNumber__select::-webkit-slider-runnable-track {
+        height: 2px;
+        cursor: pointer; }
+      body main .personNumber__select::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 18px;
+        width: 30px;
+        margin-top: -8px;
+        background: url(../images/setting-icon-slide.png);
+        background-size: 100%;
+        cursor: pointer; }
+      body main .personNumber__select:focus {
+        outline: none; }
+
+/*# sourceMappingURL=setting.css.map */

@@ -1,0 +1,246 @@
+//基本变量
+@import "../est/src/all";
+@blue:#29bde0;
+@gray:#a1a1a1;
+@yellow:#fab344;
+.bgc-blue{
+  background-color: @blue;
+}
+.bgc-yellow{
+  background-color: @yellow;
+}
+h5{
+  font-weight: normal;
+}
+input{
+  outline: none;
+}
+ //媒体查询：字体大小
+@media only screen and (min-width: 320px){
+html {
+font-size: 50px; /* 15.04÷16=94% */
+}
+}
+@media only screen and (min-width:481px) {
+html {
+font-size: 60px; /* 17.44÷16=109% */
+}
+}
+@media only screen and (min-width:561px) {
+html {
+font-size: 80px; /* 20÷16=125% */
+}
+}
+@media only screen and (min-width: 640px){
+html {
+font-size: 100px; /* 20÷16=125% */
+}}
+body{
+  background-color: #f0f0f0;
+}
+button:active{
+
+}
+//布局
+.container-wrap{
+  .container(960px);
+}
+.header{
+  display: flex;
+  padding-right: 10px;
+  align-items: center;
+  background-color:@blue;
+  font-size: 0.34rem;
+  line-height:0.64rem;
+  color: #fff;
+  text-align: center;
+  .icon-left{
+    text-align: left;
+    font-size: 0.34rem;
+  }
+  &>span{
+    font-size: 0.34rem;
+    flex:1;
+  }
+  .icon-help{
+    text-align: right;
+    font-size: 0.34rem;
+  }
+}
+.main{
+  padding: 0.2rem 0.18rem;
+  background-color: #f0f0f0;
+  .main-result-wrap,.main-word-wrap,.num-control-wrap{
+    display: flex;
+    margin-bottom: 0.1rem;
+    background-color: #fff;
+  }
+  .main-result{
+    overflow: hidden;
+  }
+
+}
+.main-result-wrap{
+
+  .main-title{
+    width:1%;
+    display: flex;
+    flex:0 0 20%;
+    height: 4.5rem;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    h5{
+      //display: inline-block;
+      width: 100%;
+      padding-right:35%;
+      writing-mode: vertical-rl;
+      font-size: 0.34rem;
+    }
+    //玩家配比媒体查询
+    @media only screen and (min-width:300px) {
+        h5{
+          padding-right: 25%;
+          //background-color: red;
+        }
+    }
+    @media only screen and (min-width:400px) {
+      h5{
+        padding-right: 30%;
+        //background-color: red;
+      }
+    }
+    @media only screen and (min-width: 640px){
+      h5{
+        padding-right: 35%;
+      }
+    }
+    //媒体查询结束
+
+  }
+  .result-infor-wrap{
+    width: 1%;
+    display: flex;
+    flex:0 0 80%;
+    flex-direction: column;
+    border-left: 1px solid #d9d9d9;
+    font-size: 0.26rem;
+    .main-result{
+      .clearfix();
+      padding-top: 0.5rem;
+      width: 100%;
+      flex:1;
+      font-size: 0.26rem;
+      line-height:0.6rem;
+      color: #a1a1a1;
+      &>li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        .block{
+          display: inline-block;
+          .size(0.1rem);
+          margin-right: 0.25rem;
+        }
+      }
+    }
+    .main-edit{
+      background-color: #fbfbfb;
+      border-top: 1px solid #d9d9d9;
+      text-align: center;
+      line-height: 0.6rem;
+      &>button{
+        width: 100%;
+        .btn(@blue,#fbfbfb,0.28rem);
+        border:none;
+        .icon-pen{
+          font-size: 0.2rem;
+          line-height:0.6rem;
+        }
+      }
+    }
+  }
+
+}
+
+.main-word-wrap{
+  .flex(column);
+  padding:0 0.28rem 0.3rem 0.28rem;
+  &>input{
+    border:0;
+    outline: none;
+    border-bottom:1px solid #f0f0f0 ;
+    font-size: 0.28rem;
+    line-height:0.8rem;
+  }
+}
+
+.num-control-wrap{
+  flex-direction: column;
+  padding:0 0.28rem 0.3rem 0.28rem;
+  font-size: 0.28rem;
+  line-height: 0.8rem;
+  text-align: left;
+  input{
+    width: 0.6rem;
+    border:0;
+    background-color: #f4f5f5;
+    font-size: 0.28rem;
+    color: @yellow;
+    text-align: center;
+  }
+  .slide-control-wrap{
+    display: flex;
+    align-items: center;
+    .icon-jian,.icon-add{
+      color: @yellow;
+      font-size: 0.28rem;
+      //border: 1px solid #000;
+    }
+    input[type="range"]{
+      flex:1;
+      margin: 0 0.2rem ;
+      -webkit-appearance: none;
+      border-radius:2px;
+      //width:200px;
+      height:3px;
+      background-image:-webkit-linear-gradient(left ,@yellow 0%,@yellow 0%,#fff 0%, #fff 100%);
+      box-shadow:inset @yellow 0 0 5px;
+      outline : none;
+      &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        width:0.61rem;
+        height:0.36rem;
+        background: @yellow url("menu.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+
+  }
+
+}
+@media only screen and (max-width:460px){
+  .num-control-wrap{
+    font-size: 20px;
+    input{
+      font-size: 20px;
+    }
+  }
+}
+.main-start-wrap {
+  margin: 0.1rem 0 0.24rem 0;
+  background-color: #fff;
+  font-size: 0px;
+  button {
+    .btn(#fff, @yellow, 0.4rem);
+    width: 100%;
+    line-height: 0.9rem;
+  }
+}
+
+
+
+
+

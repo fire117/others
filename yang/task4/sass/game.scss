@@ -1,0 +1,196 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin:0;
+  padding:0;
+}
+$header-color: #29bde0;
+$header-height: 44px;
+$brand-color: #fbb435;
+$secondColor: #9a9a9a;
+$color: #fff;
+$item-bgcolor: #29bde0;
+$wrap-bgcolor: #fff;
+$border-color: #dedede;
+$content-bgcolor: #f0f0f0;
+$titleSize: 18px;
+$itemSize: 16px;
+$desSize: 14px;
+%font {
+  font-family: "Adobe Fan Heiti Std B", sans-serif;
+}
+html {
+  @extend %font;
+}
+body {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: $header-height;
+    font-size: $titleSize;
+    background-color: $header-color;
+    .header__return {
+      font-size: 0;
+    }
+    .header__help {
+      font-size: 0;
+    }
+    .setting-icon-help {
+      width: 24px;
+      height: 24px;
+    }
+    .setting-icon-return {
+      width: 12px;
+      height: 20px;
+    }
+    .header__title {
+      color: $color;
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px 9px 80px;
+    background-color: #f0f0f0;
+  }
+  .game {
+  }
+  .game__date {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    font-size: $titleSize;
+    font-weight: 700;
+    color: $item-bgcolor;
+    background-color: #ffffff;
+    border: 1px solid #c9c9c9;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(153,223,240,.1);
+    }
+  }
+  .game__flow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 30px 0 30px 10%;
+    background-color: #ffffff;
+    border: 1px solid #c9c9c9;
+    transition: height .5s;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 0;
+      border: 8px solid transparent;
+      border-bottom: 10px solid #ffffff;
+    }
+    .game__menu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-bottom: 16px;
+      justify-content: center;
+      border-left: 2px solid #c9c9c9;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    .game__item {
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 44px;
+      font-size: $itemSize;
+      color: #ffffff;
+      background-color: #24a7c6;
+      cursor: pointer;
+      outline: none;
+      border: none;
+
+
+      &:hover, &:visited:before {
+        background-color: #5fc0cd;
+      }
+    }
+    .game__item:hover .game__icon {
+      border-right: 12px solid #5fc0cd;
+    }
+    .game__icon {
+      left: -20px;
+      top: 30%;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-right: 12px solid #24a7c6;
+    }
+    .game__kiilInfo {
+      display: flex;
+      align-items: center;
+      padding-left: 10%;
+      padding-bottom: 16px;
+      border-left: 2px solid #c9c9c9;
+      font-size: $desSize;
+    }
+    .game__voteInfo {
+      display: flex;
+      align-items: center;
+      padding-left: 10%;
+      border-left: 2px solid #c9c9c9;
+      font-size: $desSize;
+    }
+    .icon--separator {
+      position: absolute;
+      left: -16px;
+      width: 30px;
+      height: 30px;
+
+    }
+    .img-moon, .img-sun {
+      background-color: #ffffff;
+    }
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: rgba(153,223,240,.8);
+  .footer--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 44px;
+    font-size: 20px;
+    color: $color;
+    border-radius: 8px;
+    background-color: #fbb435;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+}

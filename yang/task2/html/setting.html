@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../sass/setting.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header__return">
+            <img src="../images/settting-icon-return.png" alt="" class="setting-icon-return">
+        </a>
+        <p class="header__title">参数设置</p>
+        <a href="" class="header__help">
+            <img src="../images/setting-icon-help.png" alt="" class="setting-icon-help">
+        </a>
+    </header>
+    <main>
+        <div class="distribution">
+            <p class="distribution__title">
+                玩<br>家<br>配<br>比
+            </p>
+            <div class="distribution__content">
+                <ul class="distribution__list"></ul>
+                <div class="distribution__wrap">
+                    <input type="button" value="点击设置" class="distribution--btn">
+                </div>
+            </div>
+        </div>
+        <form action="" class="customize">
+            <input type="text" placeholder="水民词组" class="customize__item customize__civilian">
+            <input type="text" placeholder="幽灵词组" class="customize__item customize__undercover">
+        </form>
+        <div class="personNumber">
+            <p class="personNumber__des">
+                玩家人数<input type="text" class="personNumber__input" value="6">人
+            </p>
+            <div class="personNumber__control">
+                <input type="button" class="personNumber__reduce">
+                <input class="personNumber__select" type="range" min="6" max="18" value="6" step="1">
+                <input type="button" class="personNumber__add">
+            </div>
+        </div>
+        <input type="button" class="licensing--btn" value="去发牌">
+    </main>
+    <script src="../setting.js"></script>
+</body>
+</html>

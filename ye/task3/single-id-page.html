@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>查看身份</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="icon-font/iconfont.css">
+	<link rel="stylesheet" href="single-id-page.css">
+	
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<i class="iconfont icon-left"></i>
+		<h4>查看身份</h4>
+		<i class="iconfont icon-delete"></i>
+	</header>
+	<main class="main">
+		<div class="show-id-wrap">
+			<div class="id-num" id="idNum">
+				1
+			</div>
+			<div class="id-infor-detail" id="inforDetail">
+				<img src="img/show.png" alt="身份">
+				<h6 class="infor-role" id="role">角色：幽灵</h6>
+				<h6 class="infor-word" id="word">词组：西伯利亚</h6>
+				<i class="line"></i>
+				<p class="game-tips">
+					想办法猜到人的词，同时还要注意 不要暴露自己哦！
+				</p>
+			</div>
+			<div class="show-id" id="showId">
+				<img src="img/hidden.png" alt="展示">
+			</div>
+		</div>
+	</main>
+	
+	<footer class="footer">
+		<button id="btnIdControl">查看1号身份</button>
+	</footer>
+</div>
+</body>
+<script src="../jquery/jquery-3.1.1.js"></script>
+<script src="show-id-page.js" type="text/javascript"></script>
+</html>

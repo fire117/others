@@ -1,0 +1,124 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin:0;
+  padding:0;
+}
+$header-color: #29bde0;
+$header-height: 44px;
+$brand-color: #fbb435;
+$secondColor: #9a9a9a;
+$color: #fff;
+$item-bgcolor: #29bde0;
+$wrap-bgcolor: #fff;
+$border-color: #dedede;
+$content-bgcolor: #f0f0f0;
+$titleSize: 18px;
+$itemSize: 16px;
+$desSize: 12px;
+%font {
+  font-family: "Adobe Fan Heiti Std B", sans-serif;
+}
+.page {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  .header {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    background-color: $header-color;
+    .header__menu {
+      font-size: 0;
+      display: inline-block;
+      margin-left: 14px;
+      height: 14px;
+    }
+  }
+  .content {
+    background-color: $content-bgcolor;
+    padding: 18px 16px 30px 16px;
+    .content__previous-version {
+      @extend %font;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 78px;
+      margin: 0 auto 24px;
+      padding: 0 8px;
+      font-size: $titleSize;
+      color: $secondColor;
+      text-align: center;
+      background-color: $wrap-bgcolor;
+      border: 1px solid $border-color;
+      .icon-enter {
+        font-size: 0;
+      }
+    }
+    .content__version-select {
+      position: relative;
+      background-color: $wrap-bgcolor;
+      border: 1px solid $border-color;
+      .content__version-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        font-size: $titleSize;
+        color: $brand-color;
+        border-bottom: 1px solid $brand-color;
+      }
+      .content__version-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 18px;
+        .version-menu__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          .version-menu__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            height: 90px;
+            font-size: $itemSize;
+            color: $color;
+            text-decoration: none;
+            background-color: $item-bgcolor;
+          }
+          .version-menu__description {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: $desSize;
+            color:$secondColor;
+          }
+        }
+        .version-menu__control {
+          margin-bottom: 10px;
+          font-size: 0;
+          .version-menu__control-link {
+            display: inline-block;
+            margin: 0 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: $content-bgcolor;
+            &:hover {
+              background-color: $item-bgcolor;
+            }
+            &:first-child {
+              background-color: $item-bgcolor;
+            }
+          }
+        }
+        .content__next-version {
+          position: absolute;
+          top: 48%;
+          right: 6%;
+        }
+      }
+    }
+  }
+}

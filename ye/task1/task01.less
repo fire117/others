@@ -1,0 +1,36 @@
+@import "../est/src/all.less";
+.global-reset();
+.wrap{
+  display: flex;
+  .container(540px);
+  flex-direction: column;
+  .row{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    .box{
+      flex:0 0 32%;
+      background-color: #e78326;
+      border-radius: 5px;
+      &:after{
+        display: block;
+        content: "";
+        padding-top: 100%;
+      }
+    }
+
+  }
+  .control{
+    button{
+      margin-bottom: 5px;
+      width: 100%;
+      .btn(#e78326,#fff);
+      border: 1px solid #e78326;
+      line-height: 32px;
+      &:hover{
+        background-color: #e78326;
+        color: #fff;
+      }
+    }
+  }
+}

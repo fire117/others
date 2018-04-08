@@ -1,0 +1,238 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin:0;
+  padding:0;
+}
+$header-color: #29bde0;
+$header-height: 44px;
+$brand-color: #fbb435;
+$secondColor: #9a9a9a;
+$color: #fff;
+$item-bgcolor: #29bde0;
+$wrap-bgcolor: #fff;
+$border-color: #dedede;
+$content-bgcolor: #f0f0f0;
+$titleSize: 18px;
+$itemSize: 16px;
+$desSize: 14px;
+%font {
+  font-family: "Adobe Fan Heiti Std B", sans-serif;
+}
+html {
+  @extend %font;
+}
+body {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: $header-height;
+    font-size: $titleSize;
+    background-color: $header-color;
+    .header__return {
+      font-size: 0;
+    }
+    .header__help {
+      font-size: 0;
+    }
+    .setting-icon-help {
+      width: 24px;
+      height: 24px;
+    }
+    .setting-icon-return {
+      width: 12px;
+      height: 20px;
+    }
+    .header__title {
+      color: $color;
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 9px;
+    background-color: #f0f0f0;
+    .distribution {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 9px;
+      font-size: 0;
+      background-color: $wrap-bgcolor;
+    }
+    .distribution__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $titleSize;
+      height: 276px;
+      width: 15%;
+      border-right: 1px solid #d9d9d9;
+      vertical-align: top;
+    }
+    .distribution__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 276px;
+      width: 85%;
+      vertical-align: top;
+    }
+    .distribution__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 0;
+      height: 234px;
+      list-style:none;
+    }
+    .distribution__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      font-size: $itemSize;
+      color: #000000;
+    }
+    .distribution__item::before {
+      display: inline-block;
+      content: "";
+      margin: 2px 4% 0 0;
+      width: 7px;
+      height: 7px;
+
+      background-color: $brand-color;
+    }
+    .distribution__item--special::before {
+      display: inline-block;
+      content: "";
+      margin: 2px 4% 0 0;
+      width: 7px;
+      height: 7px;
+      background-color: $item-bgcolor;
+    }
+    .distribution__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 41px;
+      border-top: 1px solid #d9d9d9;
+    }
+    .distribution--btn {
+      width: 100px;
+      font-size: $itemSize;
+      border: none;
+      outline: none;
+      color: #29bde0;
+      background-color: #ffffff;
+      background: url(../images/setting-icon-pen.png) no-repeat right;
+      background-size: 12px 12px;
+      cursor: pointer;
+    }
+    .customize {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px 18px;
+      background-color: $wrap-bgcolor;
+      .customize__item {
+        font-size: $itemSize;
+        border: none;
+        outline: none;
+        margin: 8px 0 0 0;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        &::-webkit-input-placeholder {
+        color: #d7d7d7;
+      }
+      }
+    }
+    .personNumber {
+      display: flex;
+      flex-direction: column;
+      margin: 14px 0 16px 0;
+      padding: 0 20px;
+      background-color: $wrap-bgcolor;
+      .personNumber__des {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0;
+        font-size: $itemSize;
+        color: #000000;
+      }
+      .personNumber__input {
+        display: block;
+        margin: 0 10px;
+        width: 30px;
+        border: none;
+        outline: none;
+        font-size: $titleSize;
+        color: $brand-color;
+        text-align: center;
+        background-color: #f4f5f5;
+      }
+    }
+    .licensing--btn {
+      height: 60px;
+      line-height: 44px;
+      text-align: center;
+      font-size: 20px;
+      color: $color;
+      background-color: $brand-color;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .personNumber__control {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .personNumber__reduce {
+      width: 14px;
+      height: 14px;
+      outline: none;
+      background: url(../images/settting-icon-add.png);
+      background-size: 100%;
+      cursor: pointer;
+      border: 1px solid #d9d9d9;
+    }
+    .personNumber__add {
+      width: 14px;
+      height: 14px;
+      outline: none;
+      background: url(../images/setting-icon-reduce.png);
+      background-size: 100%;
+      cursor: pointer;
+      border: 1px solid #d9d9d9;
+    }
+    .personNumber__select {
+      width: 84%;
+      margin: 15px 0;
+      -webkit-appearance: none;
+      background: #ffe6be -webkit-linear-gradient(#fcc671, #fcc671) no-repeat;
+      background-size: 0 100%;
+      //background: #ffe6be radial-gradient(#fcc671, #fcc671 ) left center no-repeat;
+      &::-webkit-slider-runnable-track {
+        height: 2px;
+        cursor: pointer;
+      }
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 18px;
+        width: 30px;
+        margin-top: -8px;
+        background: url(../images/setting-icon-slide.png);
+        background-size: 100%;
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

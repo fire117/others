@@ -1,0 +1,122 @@
+@import "../../est/src/all.less";
+@blue:#29bde0;
+@gray:#a1a1a1;
+@yellow:#fab344;
+@beige:#ffedc5;
+input{
+  outline: none;
+}
+::-webkit-scrollbar {
+  width:1px;
+}
+//媒体查询：字体大小
+.reset-media-font();
+//基本样式设置
+body{
+  font-size: 0.34rem;
+}
+//基本样式定义结束
+//布局开始
+.container{
+  display: flex;
+  flex-direction: column;
+  .container(720px);
+  background-color: @blue;
+}
+.header{
+  display: flex;
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  color: #fff;
+
+  h4{
+    flex: 1;
+    font-size: 0.34rem;
+  }
+  .iconfont{
+    font-size: 0.34rem;
+  }
+}
+.main{
+  position: relative;
+  padding: 0.6rem 0;
+  border-top:0.02rem solid #74d4eb;
+  border-bottom: 0.02rem solid #74d4eb;
+  .icon-audio-play{
+    position: absolute;
+    top:0.26rem;
+    right: 0.5rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    border: 0.02rem solid #fff;
+    &:after{
+      display: block;
+      width: 0;
+      content: "";
+      .abs-center();
+      left: 0.24rem;
+      //line-height: 0.6rem;
+      border-left:0.22rem solid #ffffff;
+      border-top:0.14rem solid transparent;
+      border-bottom:0.14rem solid transparent;
+      border-right: 0;
+    }
+  }
+  .img-deadman-cry{
+    .img-responsive(2.6rem);
+  }
+}
+.identity-results{
+  margin-top: 0.5rem;
+  li{
+    font-size: 0.28rem;
+    line-height: 0.32rem;
+    color: #fff;
+  }
+}
+.footer{
+  padding: 0.36rem 0.72rem;
+  .link-vote{
+    .btn(#fff,@yellow);
+    width: 100%;
+    font-size: 0.4rem;
+    line-height:0.9rem;
+    box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset, 0 0.02rem 0 rgba(0,0,0,.3);
+    &:active{
+      box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset;
+      position: relative;
+      top:1px;
+    }
+  }
+}
+.discuss-route-wrap{
+  padding: 0 0.4rem;
+  h6{
+    border-radius: 0.05rem;
+    background-color: #24a7c6;
+    font-size: 0.34rem;
+    line-height: 0.6rem;
+    color: #fff;
+  }
+}
+.icon-down-tree{
+  margin-bottom:0.1rem;
+  font-size: 0;
+  .icon-trapezoid{
+    display: inline-block;
+    height: 0;
+    width: 0.5rem;
+    border-top: 0.2rem solid @yellow;
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;
+  }
+  .icon-trangle{
+    display: inline-block;
+    width: 0;
+    border-top: 0.46rem solid @yellow;
+    border-left: 0.55rem solid transparent;
+    border-right: 0.55rem solid transparent;
+
+  }
+}

@@ -1,0 +1,138 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin:0;
+  padding:0;
+}
+$header-color: #29bde0;
+$header-height: 44px;
+$brand-color: #ffc865;
+$secondColor: #9a9a9a;
+$color: #fff;
+$item-bgcolor: #29bde0;
+$wrap-bgcolor: #fff;
+$border-color: #dedede;
+$content-bgcolor: #f0f0f0;
+$titleSize: 18px;
+$itemSize: 16px;
+$desSize: 12px;
+%font {
+  font-family: "Adobe Fan Heiti Std B", sans-serif;
+}
+.page {
+  @extend %font;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-top: $header-height;
+  .result-header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: $header-height;
+    background-color: $header-color;
+    border-bottom: 1px solid #50c9e6;
+    .result-header__title {
+      font-size: $titleSize;
+      color: $color;
+    }
+  }
+  .content {
+    padding-top: 273px;
+    padding-bottom: 68px;
+    .content-result__info {
+      position: fixed;
+      top: 44px;
+      max-width: 600px;
+      min-width: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $item-bgcolor;
+      .result-img-victory {
+        margin: 20px 0 20px 0
+      }
+      .content-result__congratulations {
+        margin-bottom: 30px;
+        width: 78%;
+        font-size: $itemSize;
+        color: $brand-color;
+      }
+      .content-result__summary {
+        margin-bottom: 10px;
+        width: 78%;
+        font-size: $itemSize;
+        color: $color;
+        line-height: 1.5;
+      }
+    }
+    .content-result__flow {
+      background-color: #ffffff;
+      .content-result__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content-result__item {
+          width: 78%;
+          .item__date {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            $font-size: $titleSize;
+          }
+          .item__time {
+            color: $secondColor;
+            font-size: $itemSize;
+          }
+          .item__daytime, .item__night {
+            padding: 5px 0;
+            font-size: $itemSize;
+            color: $secondColor;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+  }
+  .result-footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    padding: 12px 0;
+    background-color: rgba(153,223,240,.8);
+    .result-footer__again-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 44px;
+      font-size: 20px;
+      color: $color;
+      border-radius: 8px;
+      background-color: #f66f6f;
+      text-decoration: none;
+    }
+    .result-footer__push-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 44px;
+      font-size: 20px;
+      color: $color;
+      border-radius: 8px;
+      background-color: #fbb435;
+      text-decoration: none;
+    }
+  }
+}

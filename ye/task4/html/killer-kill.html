@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>投票</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/base.css">
+	<link rel="stylesheet" href="../css/killer-kill.css">
+</head>
+<body>
+	<section class="grid flex-box">
+		<header class="head ">
+			<nav class="flex-box font-white">
+				<span class="menu inline-block"></span>
+				<span class="vote flex-1" id="gameTitle">狼人杀人</span>
+				<span class="icon-close  inline-block">×</span>
+			</nav>
+			<div class="box-audio">
+				<span id="gameTips">天黑请闭眼，杀手请杀人</span>
+				<span class="circle inline-block ab-center">
+					<span class="trangle inline-block ab-center">
+					</span>
+				</span>
+			</div>
+		</header>
+		<main class="main flex-1">
+			<div class="person-wrap" id="personBox">
+				
+			</div>
+		</main>
+		<footer class="foot flex-box">
+			<button class="btn-vote font-white flex-1" id="killBtn">
+				杀死
+			</button>
+		</footer>
+	</section>
+	<script src="../../jquery/jquery-3.1.1.js"></script>
+	<script src="../js/killer-kill.js"></script>
+</body>
+</html>

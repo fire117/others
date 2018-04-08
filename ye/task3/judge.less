@@ -1,0 +1,111 @@
+@import "../est/src/all.less";
+@blue:#29bde0;
+@gray:#a1a1a1;
+@yellow:#fab344;
+@beige:#ffedc5;
+.bgc-blue{
+  background-color: @blue;
+}
+.bgc-yellow{
+  background-color: @yellow;
+}
+h5{
+  font-weight: normal;
+}
+input{
+  outline: none;
+}
+//媒体查询：字体大小
+.reset-media-font();
+//基本样式设置
+body{
+  font-size: 0.34rem;
+}
+//基本样式定义结束
+//布局开始
+.container{
+  display: flex;
+  flex-direction: column;
+  .container(720px);
+  height: 100vh;
+  background-color: @blue;
+}
+.header{
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  display: flex;
+  color: #fff;
+  border-bottom: 0.02rem solid #74d4eb;
+  h4{
+    flex: 1;
+    font-size: 0.34rem;
+  }
+  .iconfont{
+    font-size: 0.34rem;
+  }
+}
+.main{
+  flex: 1;
+  overflow: auto;
+  .person-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.person{
+  position: relative;
+  box-sizing: border-box;
+  width: 22%;
+  margin: 2% 5.66666666%;
+  border: 0.04rem solid #fff;
+  background: url("img/ptt.png") center ;
+  background-size: cover;
+  cursor: pointer;
+  &:after{
+    display: block;
+    content: "";
+    padding-top: 100%;
+  }
+  .identity{
+    position: relative;
+    height: 80%;
+    span{
+      visibility: hidden;
+    }
+    &:hover{
+      background-color: @blue;
+      span{
+        visibility: visible;
+      }
+    }
+  }
+  .index{
+    position: relative;
+    height: 20%;
+    background-color: rgba(136,202,217,0.4);
+    font-size: 0.22rem;
+    color: #fff;
+  }
+  span{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.footer{
+  padding: 0 0.76rem 0.6rem 0.76rem;
+  button{
+    width: 100%;
+    .btn(#fff,@yellow);
+    font-size: 0.4rem;
+    line-height: 0.9rem;
+    box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset, 0 0.02rem 0 rgba(0,0,0,.3);
+    &:active{
+      box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset;
+      position: relative;
+      top:1px;
+    }
+  }
+}

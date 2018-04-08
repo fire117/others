@@ -1,0 +1,132 @@
+@import "../est/src/all.less";
+@blue:#29bde0;
+@gray:#a1a1a1;
+@yellow:#fab344;
+@beige:#ffedc5;
+.bgc-blue{
+  background-color: @blue;
+}
+.bgc-yellow{
+  background-color: @yellow;
+}
+h5{
+  font-weight: normal;
+}
+input{
+  outline: none;
+}
+//媒体查询：字体大小
+.reset-media-font();
+//基本样式设置
+body{
+
+  font-size: 0.34rem;
+}
+//基本样式定义结束
+//布局开始
+.container{
+  .container(720px);
+  background-color: @blue;
+}
+.header{
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  display: flex;
+  color: #fff;
+  border-bottom: 0.02rem solid #74d4eb;
+  h4{
+    flex: 1;
+    font-size: 0.34rem;
+  }
+  .iconfont{
+    font-size: 0.34rem;
+  }
+}
+.main{
+  padding: 0.86rem 0;
+
+}
+.show-id-wrap{
+  position: relative;
+  .container(4.6rem);
+  height:6.5rem;
+  border: 0.08rem solid #fff;
+  background-color: @beige;
+  .id-num{
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translate(-50%,-50%);
+    .size(0.7rem);
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 0.7rem;
+    color: #f56b81;
+  }
+}
+.show-id{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  left:0;
+  top:0;
+  height: 6.5rem;
+  line-height: 6.5rem;
+  //background-color: red;
+  img{
+    vertical-align: middle;
+    width: 3.01rem;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.id-infor-detail{
+  display: none;
+  box-sizing: border-box;
+  height: 6.5rem;
+  padding-top: 0.58rem;
+  //background-color: blue;
+  h6{
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+  }
+  img{
+    max-width:2.22rem;
+    width: 100%;
+    height: auto;
+  }
+  .infor-role{
+    color: @blue;
+  }
+  .infor-word{
+    color: #f56b81;
+    margin-bottom: 0.2rem;
+  }
+  .line{
+    display: block;
+    height: 0.02rem;
+    background-color: #fff;
+  }
+  .game-tips{
+    padding: 0.26rem;
+    font-size: 0.26rem;
+    color: @yellow;
+    text-align: left;
+  }
+}
+
+.footer{
+  padding: 0 0.76rem 0.6rem 0.76rem;
+  button{
+    width: 100%;
+    .btn(#fff,@yellow);
+    font-size: 0.4rem;
+    line-height: 0.9rem;
+    box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset, 0 0.02rem 0 rgba(0,0,0,.3);
+    &:active{
+      box-shadow: 0 0 0.02rem 0.04rem rgba(251,180,53,.4) inset;
+      position: relative;
+      top:1px;
+    }
+  }
+}

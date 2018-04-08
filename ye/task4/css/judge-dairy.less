@@ -1,0 +1,124 @@
+@import "../../est/src/all.less";
+@blue:#29bde0;
+@gray:#a1a1a1;
+@yellow:#fab344;
+@beige:#ffedc5;
+.bgc-blue{
+  background-color: @blue;
+}
+.bgc-yellow{
+  background-color: @yellow;
+}
+h5{
+  font-weight: normal;
+}
+input{
+  outline: none;
+}
+//媒体查询：字体大小
+.reset-media-font();
+//基本样式设置
+body{
+  font-size: 0.34rem;
+}
+//基本样式定义结束
+//布局开始
+.container{
+  display: flex;
+  flex-direction: column;
+  .container(720px);
+  //height: 100vh;
+  background-color: #f0f0f0;
+}
+.header{
+  display: flex;
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  background-color: @blue;
+  color: #fff;
+  border-bottom: 0.02rem solid #74d4eb;
+  h4{
+    flex: 1;
+    font-size: 0.34rem;
+  }
+  .iconfont{
+    font-size: 0.34rem;
+  }
+}
+.main{
+  padding: 0.35rem 0.1rem 0.1rem 0.1rem;
+  background-color: #f0f0f0;
+  .main-title{
+    position: relative;
+    background-color: #f7f7f7;
+    border: 0.02rem solid #c9c9c9;
+    text-align: center;
+    span,i{
+      font-size: 0.3rem;
+      line-height: 0.84rem;
+      font-weight: bold;
+      color: @blue;
+    }
+    i{
+      position: absolute;
+      .abs-center();
+      right: 0.2rem;
+    }
+  }
+  .game-flow-wrap{
+    padding: 0 0.6rem 0 0.4rem;
+    border: 0.02rem solid #c9c9c9;
+    border-top: 0;
+    background-color: #f7f7f7;
+  }
+
+}
+.game-flow{
+  border-left: 0.02rem solid #c9c9c9;
+  .game-flow-slide{
+    border-left: 0.02rem solid #c9c9c9;
+  }
+  .game-route-wrap{
+    padding: 0.4rem 0 0.4rem 0.55rem;
+    .game-route{
+      position: relative;
+      margin: 0.1rem 0;
+      background-color: @blue;
+      font-size: 0.3rem;
+      line-height: 0.8rem;
+      a{
+        color: #fff;
+        display: block;
+      }
+      &:after{
+        display: block;
+        content: "";
+        position: absolute;
+        .abs-center();
+        left:-0.18rem;
+        border-right: 0.18rem solid @blue;
+        border-top: 0.11rem solid transparent;
+        border-bottom: 0.11rem solid transparent;
+      }
+    }
+    .icon-game-moon,.icon-game-sun{
+      position: absolute;
+      left: -0.88rem;
+      display: flex;
+      justify-content: center;
+      .size(0.6rem);
+      border: 0.02rem solid #c9c9c9;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+      .iconfont{
+        color: @yellow;
+        font-size: 0.4rem;
+        line-height: 0.6rem;
+      }
+      .icon-moon{
+        transform: rogate(-45deg);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="icon-font/iconfont.css">
+	<link rel="stylesheet" href="js-task02.css">
+	<title>身份发放</title>
+</head>
+<body>
+	<div class="container-wrap">
+		<header class="header">
+			<i class="iconfont icon-left"></i>
+			<span>参数设置</span>
+			<i class="iconfont icon-help"></i>
+		</header>
+		<main class="main">
+			<div class="main-result-wrap">
+				<div class="main-title">
+					<h5>玩家配比</h5>
+				</div>
+				<div class="result-infor-wrap">
+					<ul class="main-result " id="divResult">
+						
+					</ul>
+					<div class="main-edit">
+						<button id="idBtn">
+							点击设置&nbsp;&nbsp;<i class="iconfont icon-pen"></i>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+			<form class="main-word-wrap" id="formWord">
+				<input type="text" placeholder="水民词组">
+				<input type="text" placeholder="幽灵词组">
+			</form>
+			<div class="num-control-wrap">
+				<div>玩家人数&emsp;<input type="text" id="inputNum">&emsp;人</div>
+				<div class="slide-control-wrap">
+					<i id="btnMinus" class="iconfont icon-jian"></i>
+					<input id="range" type="range" value="0" min="4" max="18" step="1"/>
+					<i id="btnAdd" class="iconfont icon-add"></i>
+				</div>
+			</div>
+			<div class="main-start-wrap">
+				<button id="btnStart">去发牌</button>
+			</div>
+		</main>
+		
+	</div>
+</body>
+<script type="text/javascript" src="../jquery/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js-task02.js"></script>
+</html>
+

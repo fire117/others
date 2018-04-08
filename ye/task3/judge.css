@@ -1,0 +1,140 @@
+.bgc-blue {
+  background-color: #29bde0;
+}
+.bgc-yellow {
+  background-color: #fab344;
+}
+h5 {
+  font-weight: normal;
+}
+input {
+  outline: none;
+}
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 40px;
+    /* 15.04÷16=94% */
+  }
+}
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 50px;
+    /* 15.04÷16=94% */
+  }
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 60px;
+    /* 17.44÷16=109% */
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 80px;
+    /* 20÷16=125% */
+  }
+}
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 100px;
+    /* 20÷16=125% */
+  }
+}
+body {
+  font-size: 0.34rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #29bde0;
+}
+.header {
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  display: flex;
+  color: #fff;
+  border-bottom: 0.02rem solid #74d4eb;
+}
+.header h4 {
+  flex: 1;
+  font-size: 0.34rem;
+}
+.header .iconfont {
+  font-size: 0.34rem;
+}
+.main {
+  flex: 1;
+  overflow: auto;
+}
+.main .person-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.person {
+  position: relative;
+  box-sizing: border-box;
+  width: 22%;
+  margin: 2% 5.66666666%;
+  border: 0.04rem solid #fff;
+  background: url("img/ptt.png") center;
+  background-size: cover;
+  cursor: pointer;
+}
+.person:after {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+.person .identity {
+  position: relative;
+  height: 80%;
+}
+.person .identity span {
+  visibility: hidden;
+}
+.person .identity:hover {
+  background-color: #29bde0;
+}
+.person .identity:hover span {
+  visibility: visible;
+}
+.person .index {
+  position: relative;
+  height: 20%;
+  background-color: rgba(136, 202, 217, 0.4);
+  font-size: 0.22rem;
+  color: #fff;
+}
+.person span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer {
+  padding: 0 0.76rem 0.6rem 0.76rem;
+}
+.footer button {
+  width: 100%;
+  display: inline-block;
+  outline: none;
+  border: 0;
+  background-color: #fab344;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.4rem;
+  line-height: 0.9rem;
+  box-shadow: 0 0 0.02rem 0.04rem rgba(251, 180, 53, 0.4) inset, 0 0.02rem 0 rgba(0, 0, 0, 0.3);
+}
+.footer button:active {
+  box-shadow: 0 0 0.02rem 0.04rem rgba(251, 180, 53, 0.4) inset;
+  position: relative;
+  top: 1px;
+}

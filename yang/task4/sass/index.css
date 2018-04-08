@@ -1,0 +1,96 @@
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+.page .content .content__previous-version {
+  font-family: "Adobe Fan Heiti Std B", sans-serif; }
+
+.page {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto; }
+  .page .header {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    background-color: #29bde0; }
+    .page .header .header__menu {
+      font-size: 0;
+      display: inline-block;
+      margin-left: 14px;
+      height: 14px; }
+  .page .content {
+    background-color: #f0f0f0;
+    padding: 18px 16px 30px 16px; }
+    .page .content .content__previous-version {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 78px;
+      margin: 0 auto 24px;
+      padding: 0 8px;
+      font-size: 18px;
+      color: #9a9a9a;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #dedede; }
+      .page .content .content__previous-version .icon-enter {
+        font-size: 0; }
+    .page .content .content__version-select {
+      position: relative;
+      background-color: #fff;
+      border: 1px solid #dedede; }
+      .page .content .content__version-select .content__version-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        font-size: 18px;
+        color: #fbb435;
+        border-bottom: 1px solid #fbb435; }
+      .page .content .content__version-select .content__version-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 18px; }
+        .page .content .content__version-select .content__version-menu .version-menu__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%; }
+          .page .content .content__version-select .content__version-menu .version-menu__item .version-menu__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            height: 90px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            background-color: #29bde0; }
+          .page .content .content__version-select .content__version-menu .version-menu__item .version-menu__description {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #9a9a9a; }
+        .page .content .content__version-select .content__version-menu .version-menu__control {
+          margin-bottom: 10px;
+          font-size: 0; }
+          .page .content .content__version-select .content__version-menu .version-menu__control .version-menu__control-link {
+            display: inline-block;
+            margin: 0 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f0f0f0; }
+            .page .content .content__version-select .content__version-menu .version-menu__control .version-menu__control-link:hover {
+              background-color: #29bde0; }
+            .page .content .content__version-select .content__version-menu .version-menu__control .version-menu__control-link:first-child {
+              background-color: #29bde0; }
+        .page .content .content__version-select .content__version-menu .content__next-version {
+          position: absolute;
+          top: 48%;
+          right: 6%; }
+
+/*# sourceMappingURL=index.css.map */

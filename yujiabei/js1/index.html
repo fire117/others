@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .sq {
+            margin-bottom: 2%;
+            width: 30%;
+            padding-top: 30%;
+            background: #f93;
+            border-radius: 15px;
+        }
+
+        .foot {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+    <div class="sq"></div>
+</div>
+<div class="foot">
+    <button id="btn-start">start</button>
+    <button id="btn-stop">stop</button>
+</div>
+
+<script>
+    let startBtn = document.getElementById('btn-start');
+    let stopBtn = document.getElementById('btn-stop');
+    let clock;
+    let sq = document.getElementsByClassName('sq');
+    startBtn.addEventListener('click', start);
+    stopBtn.addEventListener('click', stop);
+
+    function start() {
+        clearInterval(clock);
+        clock = setInterval(setColor, 1000);
+    }
+
+    function setColor() {
+        for (let i = 0; i < sq.length; i++) {
+            sq[i].style.backgroundColor = '#f93'
+        }
+
+        let str = '';
+        let arr = [];
+        for (let i = 0; i < 3; i++) {
+            str = Math.round(Math.random() * 8);
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] === str) {
+                    arr.splice(j, 1);
+                    i--;
+                }
+            }
+            arr.push(str);
+        }
+        console.log(arr);
+        sq[arr[0]].style.backgroundColor = getColor();
+        sq[arr[1]].style.backgroundColor = getColor();
+        sq[arr[2]].style.backgroundColor = getColor();
+        console.log(sq[arr[0]].style.backgroundColor);
+        console.log(sq[arr[1]].style.backgroundColor);
+        console.log(sq[arr[2]].style.backgroundColor);
+
+
+        // let num1 = Math.floor(Math.random() * 9);//0-8
+        // let num2 = Math.floor(Math.random() * 9);//0-8
+        // let num3 = Math.floor(Math.random() * 9);//0-8
+        // sq[num1].style.backgroundColor = getColor();
+        // sq[num2].style.backgroundColor = getColor();
+        // sq[num3].style.backgroundColor = getColor();
+        // console.log(num1+''+num2+''+num3);
+        // console.log(sq[num1].style.backgroundColor);
+        // console.log(sq[num2].style.backgroundColor);
+        // console.log(sq[num3].style.backgroundColor);
+    }
+
+    function getColor() {
+        // return '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+        let r=Math.floor(Math.random()*256);
+        let g=Math.floor(Math.random()*256);
+        let b=Math.floor(Math.random()*256);
+        return "rgb("+r+','+g+','+b+")";
+    }
+
+    function stop() {
+        clearInterval(clock);
+        for (let i = 0; i < sq.length; i++) {
+            sq[i].style.backgroundColor = '#f93'
+        }
+    }
+</script>
+</body>
+</html>

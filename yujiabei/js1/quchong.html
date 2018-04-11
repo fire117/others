@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">999</button>
+<script>
+    let btn = document.getElementById('btn');
+    btn.onclick = function () {
+        let str = '';
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            str = Math.round(Math.random() * 10);
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] === str) {
+                    arr.splice(j, 1);
+                    i--;
+                }
+            }
+            arr.push(str);
+        }
+        console.log(arr);
+    };
+</script>
+</body>
+</html>

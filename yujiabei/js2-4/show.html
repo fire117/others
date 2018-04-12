@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>为啥没有提交上去?</h1>
+<script>
+    //let c = sessionStorage.all;
+    //let all = JSON.parse(c);
+    let k = sessionStorage.getItem('all');//读取缓存的字符串数据 通过访问键名来读取数据  赋值给k
+    let g = JSON.parse(k); //将k的字符串数据转为数组 赋值给g
+    console.log(g);
+</script>
+</body>
+</html>

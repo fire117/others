@@ -3,14 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-<h1 id="box">this is js2 homepage</h1>
-<script>
-    let myName=document.getElementById('box');
-    myName.onclick=function () {
-        alert(666);
-    }
-</script>
+<div class="wrap">
+    <div class="header">
+        <img src="img/back.png">
+        <h3>参数设置</h3>
+        <img src="img/help.png">
+    </div>
+    <div class="main">
+        <div class="main1">
+            <div class="main1-scale"><p>玩家配比</p></div>
+            <div class="main1-ct">
+                <ul id="show"></ul>
+                <button id="set">点击设置</button>
+            </div>
+        </div>
+        <div class="main2">
+            <p>杀手词组</p>
+            <p>平民词组</p>
+        </div>
+        <div class="main3">
+            <p>
+                <label>玩家人数</label>
+                <input type="text" id="num" value="6" style="width: .3rem;text-align: center;">
+            </p>
+            <div class="slider">
+                <button id="btnSub">-</button>
+                <input type="range" value="6" id="range" min="6" max="18" step="1">
+                <button id="btnAdd">+</button>
+            </div>
+        </div>
+        <button id="start">去发牌</button>
+    </div>
+</div>
+<script src="home.js"></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+html {
+    font-size: 625%;
+}
+body {
+    margin: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+img {
+    transform:scale(0.6);
+}
+li {
+    margin-right: .06rem;
+    display: flex;
+    align-items: center;
+}
+.wrap {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #29bde0;
+}
+.main {
+    background: #ccc;
+    padding: 2%;
+}
+.main1 {
+    height: 2rem;
+    background: #fff;
+    display: flex;
+}
+.main1-scale {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ccc;
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+}
+.main1-scale p {
+    font-size: .22rem;
+}
+.main1-ct {
+    width: 82%;
+}
+.main1-ct ul {
+    padding: 4% 6% 0 6%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.main1-ct button {
+    height: 20%;
+    display: block;
+    width: 100%;
+}
+.main2 {
+    background: #fff;
+    margin: .1rem 0;
+    padding: .06rem .1rem;
+}
+.main2 p {
+    border-bottom: 1px solid #000;
+    padding: .1rem 0;
+}
+.main3 {
+    background: #fff;
+    padding:  .2rem 0 .2rem .1rem;
+}
+.slider {
+    display: flex;
+    align-items: center;
+}
+.slider button {
+    margin: 0 .04rem;
+}
+#start {
+    display: block;
+    width: 100%;
+    margin-top: .1rem;
+    padding: .1rem 0;
+}
+.person {
+    display: inline-block;
+    width: .08rem;
+    height: .08rem;
+    background: green;
+}
+.killer {
+    display: inline-block;
+    width: .08rem;
+    height: .08rem;
+    background: red;
+}

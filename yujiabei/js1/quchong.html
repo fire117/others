@@ -23,6 +23,24 @@
         }
         console.log(arr);
     };
+
+
+
+    let num1 = Math.floor(Math.random()*9);//0-8
+    let num2 = Math.floor(Math.random()*9);
+    let num3 = Math.floor(Math.random()*9);  // 1 1 2   1 2 1   1 2 2
+    let num = [num1,num2,num3];
+    if(num1===num2) {
+        num.splice(0,1);
+        num.push(num1);
+    }
+
+    alert(num);
+
+    // let user = [1,2,2];
+    // user.splice(2,1);
+    // user.push(3);
+    // alert(user);
 </script>
 </body>
 </html>

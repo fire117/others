@@ -88,9 +88,8 @@ set.onclick = function () {
     }
     show.innerHTML = list;
     let a = JSON.stringify(all);//将all数组转为字符串 赋值给a
-    // sessionStorage.all = a;
     sessionStorage.setItem('all',a);// key-value形式  all是键名 a是字符串数据
-
+    //sessionStorage.all = a; // 简写形式
 };
 
 //洗牌函数

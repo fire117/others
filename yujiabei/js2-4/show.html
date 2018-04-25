@@ -2,16 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>show</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .imgShow {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .imgHide {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<h1>为啥没有提交上去?</h1>
-<script>
-    //let c = sessionStorage.all;
-    //let all = JSON.parse(c);
-    let k = sessionStorage.getItem('all');//读取缓存的字符串数据 通过访问键名来读取数据  赋值给k
-    let g = JSON.parse(k); //将k的字符串数据转为数组 赋值给g
-    console.log(g);
-</script>
+<div>
+    <span id="playerNum">1</span>
+    <div class="imgShow">imgShow</div>
+    <div class="imgHide">imgHide</div>
+    <!--<img src="images/show-cover.png" id="imgShow">-->
+    <!--<img src="images/show-open.png" id="imgHide">-->
+    <p id="tips"></p>
+    <button id="btn">查看1号身份</button>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="show.js"></script>
 </body>
 </html>

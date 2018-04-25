@@ -47,18 +47,20 @@
 </div>
 
 <script>
-    let startBtn = document.getElementById('btn-start');
-    let stopBtn = document.getElementById('btn-stop');
-    let clock;
-    let sq = document.getElementsByClassName('sq');
-    startBtn.addEventListener('click', start);
+    let startBtn = document.getElementById('btn-start');//开始按钮
+    let stopBtn = document.getElementById('btn-stop');//停止按钮
+    let clock;//计时器变量
+    let sq = document.getElementsByClassName('sq');//div.sq
+    startBtn.addEventListener('click', start);//添加点击事件
     stopBtn.addEventListener('click', stop);
 
+    //添加定时器
     function start() {
-        clearInterval(clock);
+        clearInterval(clock);//防止连续点击时定时器越来越快
         clock = setInterval(setColor, 1000);
     }
 
+    //随机颜色
     function getColor() {
         // return '#' + Math.floor(Math.random() * 0xffffff).toString(16);
         let r = Math.floor(Math.random() * 256);
@@ -67,7 +69,7 @@
         return "rgb(" + r + ',' + g + ',' + b + ")";
     }
 
-    //132
+    //运行定时器
     function setColor() {
         for (let i = 0; i < sq.length; i++) {
             sq[i].style.backgroundColor = '#f93'
@@ -94,6 +96,7 @@
         console.log(sq[arr[2]].style.backgroundColor);
     }
 
+    //停止定时器
     function stop() {
         clearInterval(clock);
         for (let i = 0; i < sq.length; i++) {
